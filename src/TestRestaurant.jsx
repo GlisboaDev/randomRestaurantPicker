@@ -77,9 +77,9 @@ const Restaurant = ({ data }) => {
         <Title style={{fontWeight: 'bold', marginTop: 12}}>{data.title}</Title>
         <div style={{marginBottom: 12, marginTop: 4}}>
           {Boolean(data.byow) && <StyledBadge theme="info">Byow</StyledBadge>}
-          {Boolean(data.brunch) && <StyledBadge theme="info">Brunch</StyledBadge>}
-          {Boolean(data.vegan) && <StyledBadge theme="info">Vegan</StyledBadge>}
-          {Boolean(data.vegetarian) && <Badge theme="info">Vegetarian</Badge>}
+          {Boolean(parseInt(data.brunch)) && <StyledBadge theme="info">Brunch</StyledBadge>}
+          {Boolean(parseInt(data.vegan)) && <StyledBadge theme="info">Vegan</StyledBadge>}
+          {Boolean(parseInt(data.vegetarian)) && <Badge theme="info">Vegetarian</Badge>}
         </div>
         {data.summary && <SubContainer >
           <SubTitle>Summary:</SubTitle>
